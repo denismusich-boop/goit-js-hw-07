@@ -11,18 +11,7 @@ const images = [
     url: "https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?dpr=2&h=750&w=1260",
     alt: "Group of Horses Running",
   },
-  {
-    url: "https://cdn.pixabay.com/photo/2019/05/17/09/27/the-alps-4209272_1280.jpg",
-    alt: "Alpine Spring Meadows",
-  },
-  {
-    url: "https://cdn.pixabay.com/photo/2019/05/16/21/10/landscape-4208255_1280.jpg",
-    alt: "Nature Landscape",
-  },
-  {
-    url: "https://cdn.pixabay.com/photo/2019/05/17/04/35/lighthouse-4208843_1280.jpg",
-    alt: "Lighthouse Coast Sea",
-  }
+
 ];
 
 const gallery = document.querySelector(".gallery");
@@ -31,9 +20,18 @@ const galleryMarkup = images
   .map(
     ({ url, alt }) =>
       `<li class="gallery-item">
-        <img class="gallery-image" src="${url}" alt="${alt}" />
+        <img
+          class="gallery-image"
+          src="${url}"
+          alt="${alt}"
+          width="360"
+        />
       </li>`
   )
   .join("");
 
 gallery.insertAdjacentHTML("beforeend", galleryMarkup);
+
+console.log(gallery);
+console.log(images);
+console.log(galleryMarkup);
